@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star-Barbershop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header img {
+      max-width: 180px;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: #111;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px 5px;
+      background: #fff;
+      color: #000;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo Star Barbershop" />
+    <h1>STAR-BARBERSHOP</h1>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>Présentation</h2>
+      <p>Bienvenue chez <strong>Star-Barbershop</strong>, votre salon moderne et élégant dédié à l'art de la coiffure et de la barbe. Nous offrons une expérience unique mêlant style, précision et ambiance premium.</p>
+    </div>
+
+    <div class="card">
+      <h2>Prestations</h2>
+      <ul>
+        <li>✂️ Coupe homme</li>
+        <li>🧔 Taille de barbe</li>
+        <li>💈 Rasage traditionnel</li>
+        <li>🔥 Soin vapeur + barbe</li>
+        <li>🎯 Dégradé américain</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Tarifs</h2>
+      <ul>
+        <li>Coupe homme : 18€</li>
+        <li>Taille de barbe : 12€</li>
+        <li>Coupe + barbe : 25€</li>
+        <li>Rasage complet : 15€</li>
+        <li>Soin premium : 30€</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Liens utiles</h2>
+      <a href="#" class="btn">📅 Réserver sur Booksy</a>
+      <a href="#" class="btn">⭐ Avis Google</a>
+      <a href="#" class="btn">📍 GPS / Itinéraire</a>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 Star-Barbershop - Tous droits réservés
+  </footer>
+</body>
+</html>
