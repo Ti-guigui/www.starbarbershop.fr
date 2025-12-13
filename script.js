@@ -14,6 +14,17 @@ const modal = document.getElementById("booksyModal");
 const btn = document.getElementById("booksyBtn");
 const span = document.querySelector(".close");
 
+const days = document.querySelectorAll(".hours li");
+const today = new Date().getDay(); // 0 = dimanche
+
+days.forEach((day, index) => {
+  if (index === (today === 0 ? 6 : today - 1)) {
+    day.style.color = "#d4af37";
+    day.style.fontWeight = "bold";
+  }
+});
+
+
 // Ouvrir la modale
 btn.onclick = function() {
   modal.style.display = "block";
