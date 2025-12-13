@@ -9,9 +9,10 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #111;
   color: #f5f5f5;
-  margin: 0;
+  padding-top: 180px; /* hauteur du header + un peu d’espace */
 }
 
+/* === TITRES === */
 h1, h2 {
   font-family: 'Playfair Display', serif;
   text-align: center;
@@ -57,6 +58,7 @@ nav a:hover {
 
 /* === HERO === */
 .hero {
+  width: 100%;
   height: 100vh;
   text-align: center;
   padding: 120px 20px;
@@ -93,6 +95,7 @@ nav a:hover {
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
+  margin: auto; /* centre les boutons */
 }
 
 .btn:hover {
@@ -107,12 +110,15 @@ nav a:hover {
 
 /* === SECTIONS === */
 section {
+  width: 100%;       /* full width */
   padding: 60px 20px;
-  max-width: 900px;
   margin: auto;
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre le contenu */
 }
 
 section.visible {
@@ -120,24 +126,26 @@ section.visible {
   transform: translateY(0);
 }
 
-/* === INFOS === */
-.infos {
+/* === INFOS / POURQUOI NOUS === */
+.infos, .why {
   padding: 100px 20px;
 }
 
-.infos-container {
-  max-width: 1200px;
-  margin: auto;
+.infos-container,
+.why-grid {
+  width: 100%;
   display: flex;
-  gap: 40px;
+  justify-content: center; /* centre les boîtes */
   flex-wrap: wrap;
+  gap: 40px;
 }
 
-.infos-box {
+.infos-box, .why-box {
+  flex: 0 1 300px; /* adaptable */
   background: #111;
   padding: 30px;
   border-radius: 15px;
-  flex: 1;
+  text-align: center;
 }
 
 .infos-box li {
@@ -147,25 +155,11 @@ section.visible {
   border-bottom: 1px solid #333;
 }
 
-/* === POURQUOI NOUS === */
-.why {
-  padding: 100px 20px;
-  background: #0f0f0f;
-}
-
 .why-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.why-box {
-  background: #111;
-  padding: 40px;
-  border-radius: 15px;
-  text-align: center;
 }
 
 .why-box i {
@@ -180,10 +174,12 @@ section.visible {
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+  width: 100%;
 }
 
 .gallery img {
-  width: 280px;
+  max-width: 280px;
+  width: 100%;
   border-radius: 8px;
   transition: transform 0.4s, box-shadow 0.4s;
 }
@@ -196,14 +192,14 @@ section.visible {
 /* === ÉQUIPE === */
 .team {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .member {
   text-align: center;
-  width: 250px;
+  flex: 0 1 250px; /* adaptable */
 }
 
 .member img {
@@ -214,6 +210,7 @@ section.visible {
 
 /* === FOOTER === */
 footer {
+  width: 100%;
   text-align: center;
   padding: 20px;
   background-color: #000;
@@ -308,42 +305,27 @@ form button:hover {
 }
 
 @media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 8px 10px;
-  }
+  header { flex-direction: column; text-align: center; }
+  nav { margin-top: 10px; }
+  nav a { display: inline-block; margin: 8px 10px; }
 }
 
 @media (max-width: 768px) {
   body { font-size: 15px; }
-
   header { padding: 10px 20px; }
   .logo { height: 50px; }
   .hero { padding: 80px 20px; }
   .hero h1 { font-size: 1.8em; }
   .btn { padding: 12px 25px; font-size: 0.9em; }
   section { padding: 40px 20px; }
-
   .team { flex-direction: column; align-items: center; }
   .member { width: 90%; }
   .member img { width: 100%; border-radius: 8px; }
-
   .gallery { flex-direction: column; align-items: center; }
   .gallery img { width: 90%; }
-
   form { width: 100%; max-width: 90%; }
   form input, form select, form button { width: 100%; }
   iframe { height: 200px; }
-
   .burger { display: block; }
   #menu {
     display: flex;
@@ -364,12 +346,8 @@ form button:hover {
     opacity: 1;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
   }
-  #menu a {
-    display: block;
-    margin: 12px 0;
-    padding: 8px;
-    font-size: 1.1em;
-  }
+  #menu a { display: block; margin: 12px 0; padding: 8px; font-size: 1.1em; color: #f5f5f5; transition: color 0.3s ease; }
+  #menu a:hover { color: #d4af37; }
 }
 
 @media (max-width: 480px) {
